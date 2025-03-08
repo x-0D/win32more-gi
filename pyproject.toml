@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "win32more-gi"
+version = "0.5.9"
+description = "GTK/GNOME UI components for Windows, a drop-in replacement for gi.repository"
+readme = "README.md"
+requires-python = ">= 3.9"
+authors = [
+    { name = "Nikita Bragin", email = "x.0d@ya.ru" },
+]
+dependencies = [
+    "typing_extensions; python_version < '3.9'",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: Microsoft :: Windows",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[project.urls]
+Homepage = "https://github.com/x-0D/win32more-gi"
+
+[tool.hatch.build]
+only-include = ["gi"]
+
+[tool.ruff]
+line-length = 120
+lint.select = ["E4", "E7", "E9", "F", "I"]
